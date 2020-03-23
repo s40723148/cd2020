@@ -13,3 +13,72 @@
 <p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
 <p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
 <p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
+<h1>Four-wheeled robot</h1>
+<p><span style="background-color: #ffff00;"><big><big>Assignment 1:</big></big></span></p>
+<p>Due March 25, 2020 for class 2a .</p>
+<p>What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html" rel="nofollow">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p>
+<p><span style="background-color: #ffff00;"><big><big>Assignment 2:</big></big></span></p>
+<p>Due April 22, 2020 for class 2a.</p>
+<ol>
+<li>
+<p>According to the material of Topic 0 and Topic 1, can you describe specifically what the mechanical design team need to do for accomplishing Assignment 1's four wheeled robot.</p>
+</li>
+<li>
+<p>What do you need to know from<span> </span><a href="https://cyberbotics.com/doc/guide/index" rel="nofollow">https://cyberbotics.com/doc/guide/index</a><span> </span>to implement a four-wheeled robot?</p>
+</li>
+</ol>
+<p><span style="background-color: #ffff00;"><big><big>Assignment 3:</big></big></span></p>
+<p>Due May 27, 2020 for class 2a.</p>
+<p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p>
+<h2>CoppeliaSimt</h2>
+<p><big><big><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> </big></big>(<a href="https://www.coppeliarobotics.com/downloads">download</a>)</p>
+<p style="text-align: justify;">具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。這使CoppeliaSim非常通用，非常適合多機器人應用。控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
+<p style="text-align: justify;">Coppelia Robotics 在 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm">CoppeliaSim version history</a> 中提到將不再更新 V-rep <span lang="zh-TW">,並將精力集中在CoppeliaSim上。CoppeliaSim與V-REP 100％兼容。<span style="background-color: #ffff99;">它運行速度比V-REP快，並且具有更多功能</span>。</span></p><h3>場景&amp;模型&amp;環境</h3>
+<p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
+<p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
+<p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
+<p style="text-align: justify;">模型是場景的子元素。除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。模型必須包含在場景中才能運行<span>。下圖為scenes &amp; Models 之間的關係:</span></p>
+<p><span><img alt="" height="473" src="/images/chrome_2020-03-24_00-39-57.png" width="524"/></span></p>
+<p><span style="background-color: #ffff00;"><big><big>Environment</big></big></span></p>
+<p style="text-align: justify;">CoppeliaSim中的環境定義了屬於場景但不屬於場景物件的屬性和參數。保存模型時不保存環境屬性和參數，但只有保存場景則會</p>
+<h3>Calculation modules</h3>
+<p><span style="background-color: #ffff00;"><big><big>Collision detection</big></big></span></p>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;"><big><big>Distance calculation</big></big></span></p>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;"><big><big>Inverse kinematics</big></big></span></p>
+<p><span style="background-color: #ffff00;"></span></p>
+<p><span style="background-color: #ffff00;"><big><big>Dynamics</big></big></span></p>
+<p style="text-align: justify;">CoppeliaSim的動力學模塊當前支持下列四種不同的物理引擎。用戶在任何時候都可以根據自己的仿真需求自由地從一種發動機快速切換到另一種發動機。物理引擎支持如此多樣化的原因是，物理模擬是一項複雜的任務，可以通過不同程度的精度，速度或支持多種功能來實現：</p>
+<ul>
+<ul>
+<ul>
+<li>
+<p style="text-align: justify;"><a href="http://www.bulletphysics.org/">Bullet physics library</a><span>:</span></p>
+<p style="text-align: justify;">一個開源物理引擎，具有3D碰撞檢測，剛體動力學和<span>soft body dynamics</span>（CoppeliaSim當前不支持該功能）。它用於遊戲和電影的視覺效果。它通常被視為遊戲物理引擎。</p>
+</li>
+<li>
+<p style="text-align: justify;"><span><a href="http://www.ode.org/">Open Dynamics Engine (ODE)</a><span>:</span></span></p>
+一個具有兩個主要組成部分的開源物理引擎：剛體動力學和碰撞檢測。它已在許多應用程序和遊戲中使用。它通常被視為遊戲物理引擎。</li>
+<li>
+<p style="text-align: justify;"><span><span><a href="https://www.cm-labs.com/vortex-studio/">VortexÂ® Studio</a><span>:<span> </span></span></span></span></p>
+非開源商業物理學引擎，可產生高保真物理模擬。 Vortex提供了大量物理屬性的實際參數（即對應於物理單位），使該引擎既逼真又精確。 Vortex主要用於高性能/高精度工業和研究應用。 CoppeliaSim的Vortex插件基於Vortex Studio，該插件要求每個用戶向CM Labs註冊以獲取免費許可證密鑰。</li>
+<li>
+<p style="text-align: justify;"><span><span><span><a href="http://www.newtondynamics.com/">Newton Dynamics</a><span>:<span> </span></span></span></span></span></p>
+Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了確定性求解器，它不是基於傳統的LCP或<a href="https://zh.wikipedia.org/wiki/%E8%BF%AD%E4%BB%A3">疊代</a>方法，而是分別具有兩者的穩定性和速度。這項功能使Newton Dynamics不僅成為遊戲的工具，而且還成為任何實時物理模擬的工具。當前的插件執行是BETA版本。</li>
+</ul>
+</ul>
+</ul>
+<p style="text-align: justify;"></p><h3>編寫代碼</h3>
+<p>CoppeliaSim是高度可定制的模擬器：可以自定義模擬的每個方面。此外，模擬器本身可以進行定制，以使其性能完全符合要求。這可以通過精心設計的應用程序編程接口（API）來實現。支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點&amp;缺點，但所有六種方法都是相互兼容的（即可以同時使用，甚至可以穿插使用）。模型，場景或模擬器本身的控制實體可以位於以下位置：</p>
+<ul>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :</span></span></li>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm">add-on</a><span><span> </span>or<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/sandboxScript.htm">the sandbox script</a> :</li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm">plugin</a> :</li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm">remote API</a> :</li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterfaces.htm">ROS node</a><span><span> :</span></span></li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm">BlueZero node</a> :</li>
+</ul><h3>模擬</h3>
+<h3>Tutorials</h3>
+<p><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm">Tutorials</a></p>
+<p><img alt="" height="57" src="/images/chrome_2020-03-24_01-07-28.png" width="249"/></p>

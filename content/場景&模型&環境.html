@@ -154,18 +154,15 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='Develop.html'>Next</a> >> Develop<br /><h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<br /> <a href='Develop.html'>Next</a> >> Develop</div>
+    <div id="tipue_search_content">CoppeliaSimt << <a href='CoppeliaSimt.html'>Previous</a> <a href='Calculation modules.html'>Next</a> >> Calculation modules<br /><h1>場景&模型&環境</h1>
+<p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
+<p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
+<p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
+<p style="text-align: justify;">模型是場景的子元素。除了文件（“ * .ttm”-文件類型）外，模型本身不能存在，也不能通過自身進行模擬。模型必須包含在場景中才能運行<span>。下圖為scenes &amp; Models 之間的關係:</span></p>
+<p><span><img alt="" height="473" src="./../images/chrome_2020-03-24_00-39-57.png" width="524"/></span></p>
+<p><span style="background-color: #ffff00;"><big><big>Environment</big></big></span></p>
+<p style="text-align: justify;">CoppeliaSim中的環境定義了屬於場景但不屬於場景物件的屬性和參數。保存模型時不保存環境屬性和參數，但只有保存場景則會</p>
+<br />CoppeliaSimt << <a href='CoppeliaSimt.html'>Previous</a> <a href='Calculation modules.html'>Next</a> >> Calculation modules</div>
         
     <!-- footer -->
       <div class="container">
