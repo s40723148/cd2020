@@ -1,19 +1,9 @@
 <h1>About</h1>
-<p>此內容管理系統以 <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 作為 submodule 運作, 可以選定對應的版本運作, cmsimde 可以持續改版, 不會影響之前設為 submodule, 使用舊版 cmsimde 模組的內容管理相關運作.</p>
-<h4>利用 cmsimde 建立靜態網誌方法:</h4>
-<p>1. 在 github 建立倉儲, git clone 到近端</p>
-<p>2. 參考 <a href="https://github.com/mdecourse/newcms">https://github.com/mdecourse/newcms</a>, 加入除了 cmsimde 目錄外的所有內容</p>
-<p>以 git submodule add <a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> cmsimde</p>
-<p>建立 cmsimde 目錄, 並從 github 取下子模組內容.</p>
-<p>3.在近端維護時, 更換目錄到倉儲中的 cmsimde, 以 python wsgi.py 啟動近端網際伺服器.</p>
-<p>動態內容編輯完成後, 以 generate_pages 轉為靜態內容, 以 git add commit 及 push 將內容推到遠端.</p>
-<p>4. 之後若要以 git clone 取下包含 submodule 的所有內容, 執行:</p>
-<p>git clone --recurse-submodules <a href="https://github.com/mdecourse/newcms.git">https://github.com/mdecourse/newcms.git</a></p>
-<h1>Develop</h1>
-<p><a href="https://github.com/mdecourse/cmsimde">https://github.com/mdecourse/cmsimde</a> 的開發, 可以在一個目錄中放入 cmsimde, 然後將 up_dir 中的內容放到與 cmsimde 目錄同位階的地方, 使用 command 進入 cmsimde 目錄, 執行 python wsgi.py, 就可以啟動, 以瀏覽器 https://localhost:9443 就可以連接, 以 admin 作為管理者密碼, 就可以登入維護內容.</p>
-<p>cmsimde 的開發採用 Leo Editor, 開啟 cmsimde 目錄中的 cmsimde.leo 就可以進行程式修改, 結束後, 若要保留網際內容, 只要將 cmsimde 外部的內容倒回 up_dir 目錄中即可後續對 cmsimde 遠端倉儲進行改版.</p>
-<p>init.py 位於  up_dir 目錄, 可以設定 site_title 與 uwsgi 等變數.</p>
-<h1>Four-wheeled robot</h1>
+<p><span>Repository：<a href="https://github.com/s40723148/cd2020">https://github.com/s40723148/cd2020</a></span></p>
+<p><span></span>Blog：<a href="https://s40723148.github.io/cd2020/blog/i">https://s40723148.github.io/cd2020/blog/i</a></p>
+<p>Group  <span>Repository：<a href="https://github.com/s40723150/cd2020ag2">https://github.com/s40723150/cd2020ag2</a></span></p>
+<p><span>Group web：<a href="https://s40723150.github.io/cd2020ag2/" rel="nofollow">https://s40723150.github.io/cd2020ag2/</a></span></p>
+<p><span>Youtube：<a href="https://www.youtube.com/channel/UCSEHMzQJcC2zslpQgoBFKuA?view_as=subscriber">https://www.youtube.com/channe</a></span></p><h1>Four-wheeled robot</h1>
 <p><span style="background-color: #ffff00;"><big><big>Assignment 1:</big></big></span></p>
 <p>Due March 25, 2020 for class 2a .</p>
 <p>What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html" rel="nofollow">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p>
@@ -30,8 +20,7 @@
 <p><span style="background-color: #ffff00;"><big><big>Assignment 3:</big></big></span></p>
 <p>Due May 27, 2020 for class 2a.</p>
 <p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p>
-<p></p>
-<h2>CoppeliaSimt</h2>
+<h2>Webots</h2><h2>CoppeliaSim</h2>
 <p><big><big><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> </big></big>(<a href="https://www.coppeliarobotics.com/downloads">download</a>)</p>
 <p style="text-align: justify;">具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。這使CoppeliaSim非常通用，非常適合多機器人應用。控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p style="text-align: justify;">Coppelia Robotics 在 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm">CoppeliaSim version history</a> 中提到將不再更新 V-rep <span lang="zh-TW">,並將精力集中在CoppeliaSim上。CoppeliaSim與V-REP 100％兼容。<span style="background-color: #ffff99;">它運行速度比V-REP快，並且具有更多功能</span>。</span></p>
@@ -86,7 +75,8 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <h3>Tutorials</h3>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm">Tutorials</a></p>
 <p><img alt="" height="57" src="/images/chrome_2020-03-24_01-07-28.png" width="249"/></p>
-<h1>Collaboration翻譯</h1>
+<h1>電子書翻譯</h1>
+<h2>Collaboration翻譯</h2>
 <p>DigitalProductCollaboration.txt翻譯</p>
 <p><span style="color: #ff0000;">Finding and Using the Right Design Collaboration Tools</span></p>
 <pre class="tw-data-text tw-text-large tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW">尋找和使用正確的設計協同工具<br/></span></pre>
@@ -187,7 +177,7 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span style="color: #ff0000;">We hope this guide gives you a good foundation from which you can build your own effective design collaboration process. You can learn more about design and product strategy on the Savvy blog, and feel free to contact us for help on the Savvy Apps website.</span></p>
 <p>結論說明</p>
 <p>它需要協同設計來解決構建出色的產品和體驗所伴隨的複雜，關鍵的問題。 通過利用跨學科的多個團隊成員的專業知識，<span>協同設計</span>可確保團隊從各個角度應對挑戰並尋求更好的解決方案。 通過正確的思維方式，工具和流程，<span>協同設計</span>使團隊能夠通過創造性思維和迭代來更深入。</p>
-<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，也可以隨時在Savvy Apps網站上與我們聯繫以獲取幫助。</p><h1>每周進度</h1>
+<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，也可以隨時在Savvy Apps網站上與我們聯繫以獲取幫助。</p><h3>重點整理</h3><h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
 <p>了解製作四輪機器人所需功能</p>
@@ -199,3 +189,9 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span>PDF製作(<a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a><span>)</span></span></p>
 <p><span><a href="https://cyberbotics.com/doc/guide/index">Webots </a>內容分析</span></p>
 <p><span>DesignCollaborationBetterProducts 內容翻譯</span></p>
+<p><span>W6</span></p>
+<p><span><a href="https://cyberbotics.com/doc/guide/index">Webots </a>內容分析</span></p>
+<p><span>DesignCollaborationBetterProducts 內容翻譯</span></p>
+<p>Assignment 1 總整理</p>
+<p><span>W7</span></p>
+<p><span></span></p>
