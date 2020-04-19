@@ -156,11 +156,13 @@ img.add_border {
         </header>
     <div id="tipue_search_content">場景&模型&環境 << <a href='場景&模型&環境.html'>Previous</a> <a href='編寫代碼.html'>Next</a> >> 編寫代碼<br /><h1>Calculation modules</h1>
 <p><span style="background-color: #ffff00;"><big><big>Collision detection</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim可以非常靈活的方式檢測兩個可碰撞實體之間的碰撞。 該計算是精確的干擾計算。 碰撞檢測模塊將僅檢測碰撞； 但是它不會直接對它們做出反應（有關碰撞響應，請參見<a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsModule.htm">dynamics module</a>）。</p>
 <p><span style="background-color: #ffff00;"><big><big>Distance calculation</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim可以非常靈活的方式測量兩個可測量實體之間的最小距離。 該計算是精確的最小距離計算。 距離計算模塊將僅測量距離； 但是它不會直接對他們做出反應。</p>
 <p><span style="background-color: #ffff00;"><big><big>Inverse kinematics</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim的逆運動學（IK）計算模塊非常強大且靈活。 它允許以逆運動學模式（IK模式）或正向運動學模式（FK模式）處理幾乎任何類型的機構。IK問題可以看作是找到與給定本體元素（通常是末端執行器）的某些特定位置和/或方向相對應的關節值之一。 一般而言，它是從任務空間坐標到關節空間坐標的轉換。例如，對於串接式機械手臂，問題將是在給定末端執行器的位置（和/或方向）的情況下找到操縱器中所有關節的值。 相反的在給定關節值的情況下找到末端執行器的位置-被稱為FK問題，通常被認為比IK更容易完成。在處理開放式運動學系列時，這確實是正確的，但對於一般類型的機械配置卻不成立，例如以下所示：</p>
+<p>參考：<a href="https://www.coppeliarobotics.com/helpFiles/en/graphs.htm">graphs</a> ＆ <a href="https://www.coppeliarobotics.com/helpFiles/en/dataStreamTypes.htm">graph data stream types</a></p>
+<p>運動學功能也可用於獨立應用程序（即，不直接屬於CoppeliaSim框架的應用程序，例如另一台計算機，機器人或控制器上的應用程序）。 通過<a href="https://www.coppeliarobotics.com/helpFiles/index.html">Coppelia運動學例程</a>可以做到這一點。</p>
 <p><span style="background-color: #ffff00;"><big><big>Dynamics</big></big></span></p>
 <p style="text-align: justify;">CoppeliaSim的動力學模塊當前支持下列四種不同的物理引擎。用戶在任何時候都可以根據自己的仿真需求自由地從一種發動機快速切換到另一種發動機。物理引擎支持如此多樣化的原因是，物理模擬是一項複雜的任務，可以通過不同程度的精度，速度或支持多種功能來實現：</p>
 <ul>
@@ -182,8 +184,7 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 </ul>
 </ul>
 </ul>
-<p style="text-align: justify;"></p>
-<br />場景&模型&環境 << <a href='場景&模型&環境.html'>Previous</a> <a href='編寫代碼.html'>Next</a> >> 編寫代碼</div>
+<p style="text-align: justify;"></p><br />場景&模型&環境 << <a href='場景&模型&環境.html'>Previous</a> <a href='編寫代碼.html'>Next</a> >> 編寫代碼</div>
         
     <!-- footer -->
       <div class="container">

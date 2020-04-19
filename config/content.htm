@@ -3,7 +3,8 @@
 <p><span></span>Blog：<a href="https://s40723148.github.io/cd2020/blog/i">https://s40723148.github.io/cd2020/blog/i</a></p>
 <p>Group  <span>Repository：<a href="https://github.com/s40723150/cd2020ag2">https://github.com/s40723150/cd2020ag2</a></span></p>
 <p><span>Group web：<a href="https://s40723150.github.io/cd2020ag2/" rel="nofollow">https://s40723150.github.io/cd2020ag2/</a></span></p>
-<p><span>Youtube：<a href="https://www.youtube.com/channel/UCSEHMzQJcC2zslpQgoBFKuA?view_as=subscriber">https://www.youtube.com/channe</a></span></p><h1>Four-wheeled robot</h1>
+<p><span>Youtube：<a href="https://www.youtube.com/channel/UCSEHMzQJcC2zslpQgoBFKuA?view_as=subscriber">https://www.youtube.com/channe</a></span></p>
+<p><big><big><big>課程進度</big></big></big></p>
 <p><span style="background-color: #ffff00;"><big><big>Assignment 1:</big></big></span></p>
 <p>Due March 25, 2020 for class 2a .</p>
 <p>What do you need to know from <a href="http://www.coppeliarobotics.com/helpFiles/index.html" rel="nofollow">http://www.coppeliarobotics.com/helpFiles/index.html</a> to implement a four-wheeled robot?</p>
@@ -19,12 +20,22 @@
 </ol>
 <p><span style="background-color: #ffff00;"><big><big>Assignment 3:</big></big></span></p>
 <p>Due May 27, 2020 for class 2a.</p>
-<p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p>
-<h2>Webots</h2><h2>CoppeliaSim</h2>
+<p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p><h1>Four-wheeled robot</h1>
+<p><big><big>Task members</big></big></p>
+<p><span>Repository: </span><a href="https://github.com/40623143/cd2020">40623143</a><span><span> </span>| Site:<span> </span></span><a href="https://40623143.github.io/cd2020">40623143</a></p>
+<p><span>Repository: </span><a href="https://github.com/s40723143/cd2020">40723143</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723143.github.io/cd2020">40723143</a><span> </span></p>
+<p><span>Repository: <a href="https://github.com/s40723144/cd2020">40723144</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723144.github.io/cd2020">40723144</a></span></p>
+<p><span style="background-color: #ffff00;"><big><big></big></big></span></p><h2>Webots</h2><h2>CoppeliaSim</h2>
 <p><big><big><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> </big></big>(<a href="https://www.coppeliarobotics.com/downloads">download</a>)</p>
 <p style="text-align: justify;">具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。這使CoppeliaSim非常通用，非常適合多機器人應用。控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p style="text-align: justify;">Coppelia Robotics 在 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm">CoppeliaSim version history</a> 中提到將不再更新 V-rep <span lang="zh-TW">,並將精力集中在CoppeliaSim上。CoppeliaSim與V-REP 100％兼容。<span style="background-color: #ffff99;">它運行速度比V-REP快，並且具有更多功能</span>。</span></p>
-<h3>場景&amp;模型&amp;環境</h3>
+<p style="text-align: justify;"><span lang="zh-TW">==================================================================</span></p>
+<p style="text-align: justify;"><span lang="zh-TW">利用</span>CoppeliaSim進行四輪車模擬前，需要先了解其基本設置/功能及其優點：</p>
+<p style="text-align: justify;">基本設置/功能可分成以下：</p>
+<p style="text-align: justify;">1.模擬環境 </p>
+<p style="text-align: justify;">2.力學分析</p>
+<p style="text-align: justify;">3.代碼編寫</p>
+<p style="text-align: justify;">4.模擬</p><h3>場景&amp;模型&amp;環境</h3>
 <p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
 <p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
 <p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
@@ -34,11 +45,13 @@
 <p style="text-align: justify;">CoppeliaSim中的環境定義了屬於場景但不屬於場景物件的屬性和參數。保存模型時不保存環境屬性和參數，但只有保存場景則會</p>
 <h3>Calculation modules</h3>
 <p><span style="background-color: #ffff00;"><big><big>Collision detection</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim可以非常靈活的方式檢測兩個可碰撞實體之間的碰撞。 該計算是精確的干擾計算。 碰撞檢測模塊將僅檢測碰撞； 但是它不會直接對它們做出反應（有關碰撞響應，請參見<a href="https://www.coppeliarobotics.com/helpFiles/en/dynamicsModule.htm">dynamics module</a>）。</p>
 <p><span style="background-color: #ffff00;"><big><big>Distance calculation</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim可以非常靈活的方式測量兩個可測量實體之間的最小距離。 該計算是精確的最小距離計算。 距離計算模塊將僅測量距離； 但是它不會直接對他們做出反應。</p>
 <p><span style="background-color: #ffff00;"><big><big>Inverse kinematics</big></big></span></p>
-<p><span style="background-color: #ffff00;"></span></p>
+<p>CoppeliaSim的逆運動學（IK）計算模塊非常強大且靈活。 它允許以逆運動學模式（IK模式）或正向運動學模式（FK模式）處理幾乎任何類型的機構。IK問題可以看作是找到與給定本體元素（通常是末端執行器）的某些特定位置和/或方向相對應的關節值之一。 一般而言，它是從任務空間坐標到關節空間坐標的轉換。例如，對於串接式機械手臂，問題將是在給定末端執行器的位置（和/或方向）的情況下找到操縱器中所有關節的值。 相反的在給定關節值的情況下找到末端執行器的位置-被稱為FK問題，通常被認為比IK更容易完成。在處理開放式運動學系列時，這確實是正確的，但對於一般類型的機械配置卻不成立，例如以下所示：</p>
+<p>參考：<a href="https://www.coppeliarobotics.com/helpFiles/en/graphs.htm">graphs</a> ＆ <a href="https://www.coppeliarobotics.com/helpFiles/en/dataStreamTypes.htm">graph data stream types</a></p>
+<p>運動學功能也可用於獨立應用程序（即，不直接屬於CoppeliaSim框架的應用程序，例如另一台計算機，機器人或控制器上的應用程序）。 通過<a href="https://www.coppeliarobotics.com/helpFiles/index.html">Coppelia運動學例程</a>可以做到這一點。</p>
 <p><span style="background-color: #ffff00;"><big><big>Dynamics</big></big></span></p>
 <p style="text-align: justify;">CoppeliaSim的動力學模塊當前支持下列四種不同的物理引擎。用戶在任何時候都可以根據自己的仿真需求自由地從一種發動機快速切換到另一種發動機。物理引擎支持如此多樣化的原因是，物理模擬是一項複雜的任務，可以通過不同程度的精度，速度或支持多種功能來實現：</p>
 <ul>
@@ -60,19 +73,44 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 </ul>
 </ul>
 </ul>
-<p style="text-align: justify;"></p>
-<h3>編寫代碼</h3>
+<p style="text-align: justify;"></p><h3>編寫代碼</h3>
 <p>CoppeliaSim是高度可定制的模擬器：可以自定義模擬的每個方面。此外，模擬器本身可以進行定制，以使其性能完全符合要求。這可以通過精心設計的應用程序編程接口（API）來實現。支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點&amp;缺點，但所有六種方法都是相互兼容的（即可以同時使用，甚至可以穿插使用）。模型，場景或模擬器本身的控制實體可以位於以下位置：</p>
 <ul>
-<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :</span></span></li>
-<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm">add-on</a><span><span> </span>or<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/sandboxScript.htm">the sandbox script</a> :</li>
-<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm">plugin</a> :</li>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :此方法非常容易且靈活，可以保證與其他所有默認的CoppeliaSim安裝兼容。 此方法允許自定義特定的仿真，仿真場景，並在一定程度上定制仿真器本身。 這是最簡單，最常用的方法。</span></span></li>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm">add-on</a><span><span> </span>or<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/sandboxScript.htm">the sandbox script</a> :該方法允許快速自定義模擬器本身。附件可以自動啟動並在後台運行，也可以被稱為函數。 附加組件不應該特定於特定的仿真或模型，而應提供更通用的，仿真器綁定的功能。</li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm">plugin</a> :該方法主要包括為CoppeliaSim編寫插件。 通常，插件僅用於通過自定義的Lua命令提供仿真，因此與第一種方法結合使用。 有時，插件用於為CoppeliaSim提供特殊功能，這些功能需要快速的計算能力（腳本在大多數情況下比編譯語言要慢），與硬件設備的特定接口（例如，真實的機器人）或與外界特殊的通信接口。</li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm">remote API</a> :</li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterfaces.htm">ROS node</a><span><span> :</span></span></li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm">BlueZero node</a> :</li>
 </ul>
-<h3>模擬</h3>
-<h3>Tutorials</h3>
+<p>下表詳細描述了每種方法的各自優點和缺點：</p>
+<p><img alt="" height="855" src="/images/controlEntities.jpg" width="751"/></p><h3>模擬</h3>
+<h4><span>Created by </span>40723144廖豪樹</h4>
+<p>A simulation in CoppeliaSim can be started, paused and stopped with [Menu bar --&gt; Simulation --&gt; Start/Pause/Stop simulation] or through the related toolbar buttons:</p>
+<p>可以使用<span>[菜單欄-&gt;模擬-&gt;開始/暫停/停止模擬</span>]或通過相關的工具欄按鈕來啟動，暫停和停止CoppeliaSim中的模擬：</p>
+<p><img alt="" height="83" src="/images/chrome_2020-04-08_09-53-33.png" width="228"/></p>
+<p><span>Internally(在內部), the simulator(模擬器) will use additional(額外) intermediate(中間) states in order to correctly(正確地) inform </span><span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">scripts</a>(告知腳本)</span><span> or programs about what will happen next. Following state diagram(狀態圖) illustrates(說明) the simulator's internal(內部) states:</span></p>
+<p><span>在內部，<span>模擬器將使用其他中間狀態</span>，以正確告知腳本或程序接下來將發生的情況。<span> </span><span>以下<span>狀態圖說明了模擬器的內部狀態</span></span>：</span></p>
+<p><span><img alt="" height="361" src="/images/chrome_2020-03-24_01-07-2.png" width="493"/></span></p>
+<p>Scripts and programs should<span> alwaysreact(總是反應)</span><span> </span>according to the current system call function and possibly the simulation state in order to<span> </span><span>behave correctly(正確運行)</span>. It is good practice to<span> </span><span>divide each(劃分每個)</span><span> </span>control code into<span> </span><span>at least(至少)</span><span> </span>4 system call functions (e.g. for<span> non-threaded(非線性) </span>child scripts):</p>
+<p><span>腳本和程序應始終根據當前系統調用功能以及可能的模擬狀態進行反應</span>，以便正確運行。 優良作法是<span>將每個控制代碼<span>至少分為4個系統調用函數</span></span>（例如，用於非線程子腳本）：</p>
+<ul>
+<li><strong><span>In</span><span><span>itialization(初始化)</span><span> </span>function:</span></strong><span> </span>sysCall_init: the function is called only when the script is<span><span> </span>initialized(初始化)</span>.</li>
+</ul>
+<p><strong><span>      初始化函數：</span></strong>sysCall_init：僅在腳本初始化時才調用該函數。</p>
+<ul>
+<li><strong><span><span>Actuation(激活)</span><span> </span>function:<span> </span></span></strong>sysCall_actuation: the function is called when actuation should happen.</li>
+</ul>
+<p><strong><span>      激活函數</span></strong>：sysCall_actuation：應在發生激活時調用該函數。</p>
+<ul>
+<li><strong><span><span>Sensing(感測)<span> </span></span>function:</span><span> </span></strong>sysCall_sensing: this function is called when sensing should happen.</li>
+</ul>
+<p><strong><span>      感測功能：</span></strong>sysCall_sensing：應在感測發生時調用此函數。</p>
+<ul>
+<li><strong><span><span>Clean-up(清理)</span><span> </span>function:</span></strong><span> </span>sysCall_cleanup: the function is called just before the script is<span><span> </span>de-initialized(未初始化)</span><span> </span>(e.g. at simulation end, or when the script is<span> </span><span>destroyed(銷毀)</span>).</li>
+</ul>
+<p><strong><span>      清理函數：</span></strong>sysCall_cleanup：該函數在腳本未初始化之前被調用（例如在模擬結 束時或腳本被銷毀時）。</p>
+<p></p><h3>Tutorials</h3>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm">Tutorials</a></p>
 <p><img alt="" height="57" src="/images/chrome_2020-03-24_01-07-28.png" width="249"/></p>
 <h1>電子書翻譯</h1>

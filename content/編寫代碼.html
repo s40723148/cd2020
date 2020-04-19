@@ -157,14 +157,15 @@ img.add_border {
     <div id="tipue_search_content">Calculation modules << <a href='Calculation modules.html'>Previous</a> <a href='模擬.html'>Next</a> >> 模擬<br /><h1>編寫代碼</h1>
 <p>CoppeliaSim是高度可定制的模擬器：可以自定義模擬的每個方面。此外，模擬器本身可以進行定制，以使其性能完全符合要求。這可以通過精心設計的應用程序編程接口（API）來實現。支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點&amp;缺點，但所有六種方法都是相互兼容的（即可以同時使用，甚至可以穿插使用）。模型，場景或模擬器本身的控制實體可以位於以下位置：</p>
 <ul>
-<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :</span></span></li>
-<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm">add-on</a><span><span> </span>or<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/sandboxScript.htm">the sandbox script</a> :</li>
-<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm">plugin</a> :</li>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :此方法非常容易且靈活，可以保證與其他所有默認的CoppeliaSim安裝兼容。 此方法允許自定義特定的仿真，仿真場景，並在一定程度上定制仿真器本身。 這是最簡單，最常用的方法。</span></span></li>
+<li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/addOns.htm">add-on</a><span><span> </span>or<span> </span></span><a href="https://www.coppeliarobotics.com/helpFiles/en/sandboxScript.htm">the sandbox script</a> :該方法允許快速自定義模擬器本身。附件可以自動啟動並在後台運行，也可以被稱為函數。 附加組件不應該特定於特定的仿真或模型，而應提供更通用的，仿真器綁定的功能。</li>
+<li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/plugins.htm">plugin</a> :該方法主要包括為CoppeliaSim編寫插件。 通常，插件僅用於通過自定義的Lua命令提供仿真，因此與第一種方法結合使用。 有時，插件用於為CoppeliaSim提供特殊功能，這些功能需要快速的計算能力（腳本在大多數情況下比編譯語言要慢），與硬件設備的特定接口（例如，真實的機器人）或與外界特殊的通信接口。</li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/remoteApiOverview.htm">remote API</a> :</li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/rosInterfaces.htm">ROS node</a><span><span> :</span></span></li>
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm">BlueZero node</a> :</li>
 </ul>
-<br />Calculation modules << <a href='Calculation modules.html'>Previous</a> <a href='模擬.html'>Next</a> >> 模擬</div>
+<p>下表詳細描述了每種方法的各自優點和缺點：</p>
+<p><img alt="" height="855" src="./../images/controlEntities.jpg" width="751"/></p><br />Calculation modules << <a href='Calculation modules.html'>Previous</a> <a href='模擬.html'>Next</a> >> 模擬</div>
         
     <!-- footer -->
       <div class="container">
