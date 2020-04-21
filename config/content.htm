@@ -20,22 +20,32 @@
 </ol>
 <p><span style="background-color: #ffff00;"><big><big>Assignment 3:</big></big></span></p>
 <p>Due May 27, 2020 for class 2a.</p>
-<p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p><h1>Four-wheeled robot</h1>
+<p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p>
+<h1>Four-wheeled robot</h1>
 <p><big><big>Task members</big></big></p>
 <p><span>Repository: </span><a href="https://github.com/40623143/cd2020">40623143</a><span><span> </span>| Site:<span> </span></span><a href="https://40623143.github.io/cd2020">40623143</a></p>
 <p><span>Repository: </span><a href="https://github.com/s40723143/cd2020">40723143</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723143.github.io/cd2020">40723143</a><span> </span></p>
 <p><span>Repository: <a href="https://github.com/s40723144/cd2020">40723144</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723144.github.io/cd2020">40723144</a></span></p>
-<p><span style="background-color: #ffff00;"><big><big></big></big></span></p><h2>Webots</h2><h2>CoppeliaSim</h2>
+<p></p>
+<h2>CoppeliaSim</h2>
 <p><big><big><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> </big></big>(<a href="https://www.coppeliarobotics.com/downloads">download</a>)</p>
 <p style="text-align: justify;">具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。這使CoppeliaSim非常通用，非常適合多機器人應用。控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p style="text-align: justify;">Coppelia Robotics 在 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm">CoppeliaSim version history</a> 中提到將不再更新 V-rep <span lang="zh-TW">,並將精力集中在CoppeliaSim上。CoppeliaSim與V-REP 100％兼容。<span style="background-color: #ffff99;">它運行速度比V-REP快，並且具有更多功能</span>。</span></p>
 <p style="text-align: justify;"><span lang="zh-TW">==================================================================</span></p>
-<p style="text-align: justify;"><span lang="zh-TW">利用</span>CoppeliaSim進行四輪車模擬前，需要先了解其基本設置/功能及其優點：</p>
+<p style="text-align: justify;"><span lang="zh-TW">利用</span>CoppeliaSim進行四輪車模擬前，需要先了解其特色及其基本設置/功能：</p>
+<p style="text-align: justify;"><span>1.跨平台支援</span></p>
+<p style="text-align: justify;"><span>2.支援六種撰寫程式的方式<span><span> </span></span></span></p>
+<p style="text-align: justify;"><span><span><span>3.支援6種程式語言</span></span></span></p>
+<p style="text-align: justify;"><span><span><span>4.具備完整的運動學計算器<span><span> </span></span></span></span></span></p>
+<p style="text-align: justify;"><span><span><span><span><span>5.支援路線及運動完整規劃</span></span></span></span></span></p>
+<p style="text-align: justify;"><span><span><span><span><span>6.支援 <a href="https://en.wikipedia.org/wiki/Remote_Application_Programming_Interface">Remote API</a></span></span></span></span></span></p>
+<p style="text-align: justify;"><span><span><span><span><span>及<a href="https://www.coppeliarobotics.com/helpFiles/en/coppeliaSimFeatures.htm">其他特色</a></span></span></span></span></span></p>
 <p style="text-align: justify;">基本設置/功能可分成以下：</p>
 <p style="text-align: justify;">1.模擬環境 </p>
 <p style="text-align: justify;">2.力學分析</p>
 <p style="text-align: justify;">3.代碼編寫</p>
-<p style="text-align: justify;">4.模擬</p><h3>場景&amp;模型&amp;環境</h3>
+<p style="text-align: justify;">4.模擬</p>
+<p style="text-align: justify;"></p><h3>場景&amp;模型&amp;環境</h3>
 <p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
 <p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
 <p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
@@ -73,7 +83,7 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 </ul>
 </ul>
 </ul>
-<p style="text-align: justify;"></p><h3>編寫代碼</h3>
+<h3>編寫代碼</h3>
 <p>CoppeliaSim是高度可定制的模擬器：可以自定義模擬的每個方面。此外，模擬器本身可以進行定制，以使其性能完全符合要求。這可以通過精心設計的應用程序編程接口（API）來實現。支持六種不同的編程或編碼方法，每種方法都具有相對於其他方法的特殊優點&amp;缺點，但所有六種方法都是相互兼容的（即可以同時使用，甚至可以穿插使用）。模型，場景或模擬器本身的控制實體可以位於以下位置：</p>
 <ul>
 <li><span>an </span><a href="https://www.coppeliarobotics.com/helpFiles/en/scripts.htm">embedded script</a><span><span> :此方法非常容易且靈活，可以保證與其他所有默認的CoppeliaSim安裝兼容。 此方法允許自定義特定的仿真，仿真場景，並在一定程度上定制仿真器本身。 這是最簡單，最常用的方法。</span></span></li>
@@ -84,7 +94,8 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm">BlueZero node</a> :</li>
 </ul>
 <p>下表詳細描述了每種方法的各自優點和缺點：</p>
-<p><img alt="" height="855" src="/images/controlEntities.jpg" width="751"/></p><h3>模擬</h3>
+<p><img alt="" height="855" src="/images/controlEntities.jpg" width="751"/></p>
+<h3>模擬</h3>
 <h4><span>Created by </span>40723144廖豪樹</h4>
 <p>A simulation in CoppeliaSim can be started, paused and stopped with [Menu bar --&gt; Simulation --&gt; Start/Pause/Stop simulation] or through the related toolbar buttons:</p>
 <p>可以使用<span>[菜單欄-&gt;模擬-&gt;開始/暫停/停止模擬</span>]或通過相關的工具欄按鈕來啟動，暫停和停止CoppeliaSim中的模擬：</p>
@@ -110,9 +121,11 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <li><strong><span><span>Clean-up(清理)</span><span> </span>function:</span></strong><span> </span>sysCall_cleanup: the function is called just before the script is<span><span> </span>de-initialized(未初始化)</span><span> </span>(e.g. at simulation end, or when the script is<span> </span><span>destroyed(銷毀)</span>).</li>
 </ul>
 <p><strong><span>      清理函數：</span></strong>sysCall_cleanup：該函數在腳本未初始化之前被調用（例如在模擬結 束時或腳本被銷毀時）。</p>
-<p></p><h3>Tutorials</h3>
+<p></p>
+<h3>Tutorials</h3>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm">Tutorials</a></p>
 <p><img alt="" height="57" src="/images/chrome_2020-03-24_01-07-28.png" width="249"/></p>
+<h2>Webots</h2>
 <h1>電子書翻譯</h1>
 <h2>Collaboration翻譯</h2>
 <p>DigitalProductCollaboration.txt翻譯</p>
@@ -215,7 +228,9 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span style="color: #ff0000;">We hope this guide gives you a good foundation from which you can build your own effective design collaboration process. You can learn more about design and product strategy on the Savvy blog, and feel free to contact us for help on the Savvy Apps website.</span></p>
 <p>結論說明</p>
 <p>它需要協同設計來解決構建出色的產品和體驗所伴隨的複雜，關鍵的問題。 通過利用跨學科的多個團隊成員的專業知識，<span>協同設計</span>可確保團隊從各個角度應對挑戰並尋求更好的解決方案。 通過正確的思維方式，工具和流程，<span>協同設計</span>使團隊能夠通過創造性思維和迭代來更深入。</p>
-<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，也可以隨時在Savvy Apps網站上與我們聯繫以獲取幫助。</p><h3>重點整理</h3><h1>每周進度</h1>
+<p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，也可以隨時在Savvy Apps網站上與我們聯繫以獲取幫助。</p>
+<h3>重點整理</h3>
+<h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
 <p>了解製作四輪機器人所需功能</p>
