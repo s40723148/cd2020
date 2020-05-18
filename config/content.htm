@@ -45,7 +45,8 @@
 <p style="text-align: justify;">2.力學分析</p>
 <p style="text-align: justify;">3.代碼編寫</p>
 <p style="text-align: justify;">4.模擬</p>
-<p style="text-align: justify;"></p><h3>場景&amp;模型&amp;環境</h3>
+<p style="text-align: justify;"></p>
+<h3>場景&amp;模型&amp;環境</h3>
 <p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
 <p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
 <p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
@@ -94,7 +95,8 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <li><span>a </span><a href="https://www.coppeliarobotics.com/helpFiles/en/blueZeroPlugin.htm">BlueZero node</a> :此方法允許外部應用程序通過BlueZero連接到CoppeliaSim。</li>
 </ul>
 <p>下表詳細描述了每種方法的各自優點和缺點：</p>
-<p><img alt="" height="855" src="/images/controlEntities.jpg" width="751"/></p><h3>模擬</h3>
+<p><img alt="" height="855" src="/images/controlEntities.jpg" width="751"/></p>
+<h3>模擬</h3>
 <h4><span>Created by </span>40723144廖豪樹</h4>
 <p>A simulation in CoppeliaSim can be started, paused and stopped with [Menu bar --&gt; Simulation --&gt; Start/Pause/Stop simulation] or through the related toolbar buttons:</p>
 <p>可以使用<span>[菜單欄-&gt;模擬-&gt;開始/暫停/停止模擬</span>]或通過相關的工具欄按鈕來啟動，暫停和停止CoppeliaSim中的模擬：</p>
@@ -228,8 +230,29 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p>結論說明</p>
 <p>它需要協同設計來解決構建出色的產品和體驗所伴隨的複雜，關鍵的問題。 通過利用跨學科的多個團隊成員的專業知識，<span>協同設計</span>可確保團隊從各個角度應對挑戰並尋求更好的解決方案。 通過正確的思維方式，工具和流程，<span>協同設計</span>使團隊能夠通過創造性思維和迭代來更深入。</p>
 <p>我們希望本指南為您提供一個良好的基礎，您可以以此為基礎建立自己的有效設計協作流程。 您可以在Savvy博客上了解有關設計和產品策略的更多信息，也可以隨時在Savvy Apps網站上與我們聯繫以獲取幫助。</p>
-<h3>重點整理</h3>
-<h1>每周進度</h1>
+<h1>四輪機器人進度</h1>
+<p><big><big><big>coppelia sim (V-rep)導入模型並模擬</big></big></big></p>
+<p><span style="color: #33cccc;"><big><big>模型由<a href="https://s40723147.github.io/cd2020/content/onshape.html" style="color: #33cccc;">40723147</a>繪製</big></big></span></p>
+<p>1.開啟<span>coppelia sim 點選 File &gt;&gt; Import &gt;&gt; Mesh... ，導入模型檔案(小組繪製模型為STL檔)</span></p>
+<p><span>2.將導入的模型依照旗子母關係擺放</span></p>
+<p><span><img alt="" height="207" src="/images/coppeliaSim_2020-05-18_17-46-21.png" width="299"/></span></p>
+<p><span>3.新增節點，右鍵點選車輪 &gt;&gt; Add &gt;&gt; Joint &gt;&gt; Revolute</span></p>
+<p><span><img alt="" height="245" src="/images/coppeliaSim_2020-05-18_17-52-56.png" width="330"/></span></p>
+<p><span>4.將Joint移動至輪胎與輪軸銜接處(<span style="color: #ff0000;">四顆輪胎都要做</span>)</span></p>
+<p><span><img alt="" height="184" src="/images/coppeliaSim_2020-05-18_18-01-28.png" width="317"/></span></p>
+<p><span>5.調整車子設定，在零件的圖示上 用左鍵快速點及兩下 &gt;&gt; 點選 show dynamic properties dialog &gt;&gt; 勾選 Body is respondable 和 Body is dynamic (<span style="color: #ff0000;">車身和車輪</span>)</span></p>
+<p><span><img alt="" height="312" src="/images/coppeliaSim_2020-05-18_18-21-14.png" width="456"/></span></p>
+<p><span>6.調整Joint設定，在零件的圖示上 用左鍵快速點及兩下 &gt;&gt; 點選 show dynamic properties dialog &gt;&gt; 勾選 Motor enabled 並給定<span style="color: #0000ff;">速度</span></span></p>
+<p><span><img alt="" height="292" src="/images/coppeliaSim_2020-05-18_18-35-24.png" width="458"/></span></p>
+<p><span>7.調整後按下star simulation 進行模擬</span></p>
+<p><span><img alt="" height="64" src="/images/coppeliaSim_2020-05-18_18-46-26.png" width="64"/></span></p>
+<p><big><big><big>對模型加入腳本並編寫程式進行控制</big></big></big></p>
+<p>1.對車身零件點右鍵 點選Add &gt;&gt; Associated scrip &gt;&gt; Non threated</p>
+<p><img alt="" height="412" src="/images/coppeliaSim_2020-05-18_18-48-38.png" width="454"/></p>
+<p>2.<span>用左鍵快速點及兩下圖示</span></p>
+<p><span><img alt="" height="82" src="/images/coppeliaSim_2020-05-18_18-54-02.png" width="91"/></span></p>
+<p><span>於開啟的視窗即可開始編寫程式</span></p>
+<p><span><img alt="" height="385" src="/images/coppeliaSim_2020-05-18_18-55-27.png" width="460"/></span></p><h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
 <p>了解製作四輪機器人所需功能</p>
