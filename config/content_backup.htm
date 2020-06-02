@@ -282,3 +282,30 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span></span>W12</p>
 <p>協同管理網站 : <a href="http://mde.tw/cdaw12-1/content/index.html">http://mde.tw/cdaw12-1/content/index.html</a></p>
 <p>倉儲 : <a href="https://github.com/mdecourse/cdaw12-1">https://github.com/mdecourse/cdaw12-1</a></p>
+<p>W13</p>
+<p>協同管理網站 : <a href="http://mde.tw/cdaw13-3/content/index.html">http://mde.tw/cdaw13-3/content/index.html</a></p>
+<p>倉儲 : <a href="https://github.com/mdecourse/cdaw13-3">https://github.com/mdecourse/cdaw13-3</a></p>
+<p>4輪車模擬問題:</p>
+<p>1.尺寸問題(公英制混用)</p>
+<p>2.Remote API</p>
+<p>車輪與底盤配合(以解決)</p>
+<p><big><big>VirtualBox網路設定</big></big></p>
+<p>新增網路設定</p>
+<p><img alt="" height="188" src="/images/VirtualBox_2020-06-03_01-44-50.png" width="278"/></p>
+<p><span>設定Port號(IPv4 &amp; IPv6)</span></p>
+<p><span><img alt="" height="283" src="/images/VirtualBox_2020-06-03_02-14-34.png" width="422"/></span></p>
+<p><span><img alt="" height="282" src="/images/VirtualBox_2020-06-03_02-14-42.png" width="422"/></span></p>
+<p><span></span></p>
+<p>IP 查詢使用:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
+<p>*若遇到Proxyj問題</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/apt/apt.conf.d
+sudo vi proxy.conf
+
+#案I鍵進入編輯輸入以下內容:(編輯完成後按ESC&gt;&gt;:wq儲存編輯)
+Acquire::http::proxy "http://[2001:288:6004:17::port號]:3128";
+
+更新apt
+sudo apt update
+</pre>
+<p></p>
