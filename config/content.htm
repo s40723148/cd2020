@@ -254,7 +254,8 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span>於開啟的視窗即可開始編寫程式</span></p>
 <p><span><img alt="" height="385" src="/images/coppeliaSim_2020-05-18_18-55-27.png" width="460"/></span></p>
 <p><big><big><big>Remote API</big></big></big></p>
-<p></p><h2>問題</h2>
+<p>用Remote API取得遠端模擬影像</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rwATIlMwpFA" width="560"></iframe></p><h2>問題</h2>
 <p>1.模型導入後無法正常模擬(程式寫入後,無法控程式寫入後,無法控制)</p><h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
@@ -308,4 +309,36 @@ Acquire::http::proxy "http://[2001:288:6004:17::port號]:3128";
 更新apt
 sudo apt update
 </pre>
+<p>*ipv6環境設定</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/netplan
+
+sudo vi 00-installer-config.yaml
+
+#按I健進入編輯,ESC退出,:wq儲存
+# This is the network config written by 'subiquity'
+network:
+    ethernets:
+        enpes3:
+            dhcp4: true
+            dhcp6: true
+            nameservers:
+                addresses:
+                    - 2001:b000:168::1
+    version: 2
+
+sudo netplan apply</pre>
+<p>W14</p>
+<p>IPv6設置</p>
+<p>依照<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">老師說明</a>設定IPv6:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">2001:288:6004:17:2020:1::7148/64
+
+gateway: 2001:288:6006:17::254
+
+dns: 
+2001:288:6004:1::2
+2001:288:6004:17::2
+2001:288:6004:17::3 
+2001:b000:168::1
+
+"c:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands sethduuid Ubwcm_w13.vdi</pre>
 <p></p>
