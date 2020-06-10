@@ -207,6 +207,38 @@ Acquire::http::proxy "http://[2001:288:6004:17::port號]:3128";
 更新apt
 sudo apt update
 </pre>
+<p>*ipv6環境設定</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/netplan
+
+sudo vi 00-installer-config.yaml
+
+#按I健進入編輯,ESC退出,:wq儲存
+# This is the network config written by 'subiquity'
+network:
+    ethernets:
+        enpes3:
+            dhcp4: true
+            dhcp6: true
+            nameservers:
+                addresses:
+                    - 2001:b000:168::1
+    version: 2
+
+sudo netplan apply</pre>
+<p>W14</p>
+<p>IPv6設置</p>
+<p>依照<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">老師說明</a>設定IPv6:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">2001:288:6004:17:2020:1::7148/64
+
+gateway: 2001:288:6006:17::254
+
+dns: 
+2001:288:6004:1::2
+2001:288:6004:17::2
+2001:288:6004:17::3 
+2001:b000:168::1
+
+"c:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands sethduuid Ubwcm_w13.vdi</pre>
 <p></p><br />問題 << <a href='問題.html'>Previous</a> </div>
         
     <!-- footer -->
