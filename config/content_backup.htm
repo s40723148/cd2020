@@ -257,12 +257,14 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span><img alt="" height="385" src="/images/coppeliaSim_2020-05-18_18-55-27.png" width="460"/></span></p>
 <p><big><big><big>Remote API</big></big></big></p>
 <p>用Remote API取得遠端模擬影像</p>
-<p></p>
+<p>練習:</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rwATIlMwpFA" width="560"></iframe></p>
+<p>小組模型:(尚無法控制方向)</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ueUKxCCQPW8" width="560"></iframe></p>
 <p>參考老師網頁進行設置:</p>
 <p><a href="http://mde.tw/cd2020pj1/content/RemoteAPI.html">http://mde.tw/cd2020pj1/content/RemoteAPI.html</a></p>
 <p><a href="http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html">http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html</a></p>
-<p>於車子上建立sensor</p>
+<p>於車子上建立sensor ,命名為cam_f</p>
 <p><img alt="" height="46" src="/images/coppeliaSim_2020-06-23_22-46-01.png" width="211"/></p>
 <p>對其參數進行設定:</p>
 <p><img alt="" height="328" src="/images/coppeliaSim_2020-06-23_22-47-34.png" width="311"/></p>
@@ -394,8 +396,7 @@ for i in range(150):   #可用while True: 取代
     print('Frame took:', dt*1000.0, 'ms');
     cv2.imshow('image',img);
     cv2.waitKey(1); # in milliseconds</pre>
-<p></p>
-<h2>問題</h2>
+<p></p><h2>問題</h2>
 <p>1.模型導入後無法正常模擬(程式寫入後,無法控程式寫入後,無法控制)</p>
 <h1>VirtualBox</h1>
 <p><a href="https://www.virtualbox.org/">VirtualBox</a> (<a href="https://www.virtualbox.org/wiki/Downloads">Download link</a>)</p>
@@ -426,6 +427,12 @@ sudo apt update
 <p><img alt="" height="188" src="/images/VirtualBox_2020-06-03_01-44-50.png" width="278"/></p>
 <p><span>設定Port號(IPv6)</span></p>
 <p><span><img alt="" height="282" src="/images/VirtualBox_2020-06-03_02-14-42.png" width="422"/></span></p>
+<p>IP 查詢使用:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_251050"></div>
+</div>
+<p><img alt="" height="299" src="/images/VirtualBoxVM_2020-06-24_01-44-25.png" width="496"/></p>
 <p>*ipv6環境設定</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/netplan
 

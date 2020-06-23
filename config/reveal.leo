@@ -24,19 +24,44 @@
 <v t="leo.20180902120523.11"><vh>網頁</vh>
 <v t="leo.20180902120523.12"><vh>網頁連結</vh></v>
 </v>
+<v t="407.20200624030405.1"><vh>標題</vh>
+<v t="407.20200624030405.2"><vh>期中進度</vh></v>
+</v>
+<v t="407.20200624031032.1"><vh>assignment</vh>
+<v t="407.20200624031032.2"><vh>Assignment 1</vh>
+<v t="407.20200624031032.3"><vh>Assignment 1</vh></v>
+</v>
+<v t="407.20200624031032.4"><vh>Assignment 2</vh>
+<v t="407.20200624031032.5"><vh>Assignment 2</vh></v>
+</v>
+</v>
 <v t="407.20200624005844.1"><vh>標題</vh>
 <v t="407.20200624005844.2"><vh>期末進度</vh></v>
 </v>
-<v t="leo.20180902120523.13"><vh>各式內容引用範例</vh>
+<v t="leo.20180902120523.13"><vh>VBox</vh>
 <v t="leo.20180902120523.14"><vh>VirtualBox</vh>
 <v t="leo.20180902120523.15"><vh>標題</vh></v>
 </v>
-<v t="leo.20180902120523.16"><vh>導入縮排程式碼</vh>
-<v t="leo.20180902120523.17"><vh>引用程式碼</vh></v>
+<v t="leo.20180902120523.16"><vh>IPv4</vh>
+<v t="leo.20180902120523.17"><vh>IPv4</vh></v>
 </v>
-<v t="leo.20180902120523.18"><vh>導入影片</vh>
-<v t="leo.20180902120523.19"><vh>iframe 導入影片</vh></v>
+<v t="leo.20180902120523.18"><vh>IPv6</vh>
+<v t="leo.20180902120523.19"><vh>IPv4</vh></v>
 </v>
+</v>
+<v t="407.20200624015950.1"><vh>四輪車</vh>
+<v t="407.20200624015950.2"><vh>coppeliasim</vh>
+<v t="407.20200624015950.3"><vh>標題</vh></v>
+</v>
+<v t="407.20200624015950.4"><vh>執行內容</vh>
+<v t="407.20200624015950.5"><vh>內容說明</vh></v>
+</v>
+<v t="407.20200624015950.6"><vh>API成果</vh>
+<v t="407.20200624015950.7"><vh>RAPI影片</vh></v>
+</v>
+</v>
+<v t="407.20200624031640.1"><vh>W進度</vh>
+<v t="407.20200624031640.2"><vh>W進度</vh></v>
 </v>
 </v>
 </v>
@@ -57,6 +82,104 @@
 						
 </t>
 <t tx="407.20200624005844.2"># 期末進度</t>
+<t tx="407.20200624015950.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="407.20200624015950.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="407.20200624015950.3">## CoppeliaSim
+</t>
+<t tx="407.20200624015950.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="407.20200624015950.5">## CoppeliaSim模擬 &amp; Remote API
+#### 將小組繪製STL模型導入CoppeliaSim,並進行模擬及透過Remote API 取得視覺傳感器的影像
+* [詳細內容](https://s40723148.github.io/cd2020/content/%E5%9B%9B%E8%BC%AA%E6%A9%9F%E5%99%A8%E4%BA%BA%E6%A8%A1%E6%93%AC.html)</t>
+<t tx="407.20200624015950.6">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="407.20200624015950.7">## 影片
+&lt;iframe src="https://www.youtube.com/embed/ueUKxCCQPW8" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+</t>
+<t tx="407.20200624030405.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="407.20200624030405.2"># 期中進度
+</t>
+<t tx="407.20200624031032.1">&lt;section&gt;
+@others
+&lt;/section&gt;
+
+</t>
+<t tx="407.20200624031032.2">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="407.20200624031032.3"># Assignment 1
+* [詳細資料](https://s40723148.github.io/cd2020/content/CoppeliaSim%E8%B3%87%E6%96%99%E5%88%86%E6%9E%90.html)
+</t>
+<t tx="407.20200624031032.4">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+&lt;!-- 請注意, @others 不可以內縮 --&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+
+						
+</t>
+<t tx="407.20200624031032.5"># Assignment 2
+* [詳細資料](https://s40723148.github.io/cd2020/content/Collaboration%E7%BF%BB%E8%AD%AF.html)</t>
+<t tx="407.20200624031640.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="407.20200624031640.2">## 每周進度
+* [詳細內容](https://s40723148.github.io/cd2020/content/%E6%AF%8F%E5%91%A8%E9%80%B2%E5%BA%A6.html)</t>
 <t tx="leo.20180902120523.1"></t>
 <t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
 
@@ -112,34 +235,8 @@ Created by [40723148](https://s40723148.github.io/cd2020/content/)
 
 						
 </t>
-<t tx="leo.20180902120523.17">## 利用 Markdown 寫投影片
-以下利用 Markdown 格式展示 Python 程式碼:
-```
-@language python
-# use threading and subprocess to threading the make process
-import os
-import subprocess
-import threading
-
-def domake():
-    
-    path = "../exposed/api/exposed"
-    ubuntu = "../Ubuntu"
-    
-    # create obj path
-    
-    if not os.path.exists(path+"/../obj"):
-        os.makedirs(path+"/../obj")
-    
-    subprocess.call(["make", "clean"], cwd=path)
-    subprocess.call("make", cwd=path)
-    subprocess.call(["cp", "{libslvs.so, _slvs.so, slvs.py}", ubuntu], cwd=path)
-    subprocess.call(["python3", "circle_ex.py"], cwd=path+"/"+ubuntu)
-    
-make = threading.Thread(target=domake)
-make.start()
-```
-</t>
+<t tx="leo.20180902120523.17">## IPv4設定
+* [IPv4詳細內容](https://s40723148.github.io/cd2020/content/IPv4%E8%A8%AD%E5%AE%9A.html)</t>
 <t tx="leo.20180902120523.18">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
 @others
@@ -149,11 +246,8 @@ make.start()
 
 						
 </t>
-<t tx="leo.20180902120523.19">## 使用 iframe 導入影片
-
-### 導入影片 template
-
-&lt;iframe src="https://player.vimeo.com/video/183950627" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+<t tx="leo.20180902120523.19">## IPv4設定
+* [IPv6詳細內容](https://s40723148.github.io/cd2020/content/IPv6%E8%A8%AD%E5%AE%9A.html)
 </t>
 <t tx="leo.20180902120523.2"></t>
 <t tx="leo.20180902120523.3">@language xml
