@@ -21,13 +21,12 @@
 <p><span style="background-color: #ffff00;"><big><big>Assignment 3:</big></big></span></p>
 <p>Due May 27, 2020 for class 2a.</p>
 <p>According to the reading of Topic 2 and Topic 3, propose a Mechatronic project by using CoppeliaSim or Webots and Onshape.</p>
-<h1>Four-wheeled robot</h1>
+<h1>CoppeliaSim</h1>
 <p><big><big>Task members</big></big></p>
 <p><span>Repository: </span><a href="https://github.com/40623143/cd2020">40623143</a><span><span> </span>| Site:<span> </span></span><a href="https://40623143.github.io/cd2020">40623143</a></p>
 <p><span>Repository: </span><a href="https://github.com/s40723143/cd2020">40723143</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723143.github.io/cd2020">40723143</a><span> </span></p>
 <p><span>Repository: <a href="https://github.com/s40723144/cd2020">40723144</a><span><span> </span>| Site:<span> </span></span><a href="https://s40723144.github.io/cd2020">40723144</a></span></p>
-<p></p>
-<h2>CoppeliaSim</h2>
+<p></p><h2>CoppeliaSim資料分析</h2>
 <p><big><big><a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> </big></big>(<a href="https://www.coppeliarobotics.com/downloads">download</a>)</p>
 <p style="text-align: justify;">具有集成開發環境的機器人模擬器CoppeliaSim基於分佈式控制體系結構：可以通過嵌入式腳本，插件，ROS節點，BlueZero節點，遠程API客戶端或自定義解決方案分別控制每個對象/模型。這使CoppeliaSim非常通用，非常適合多機器人應用。控制器可以用C / C ++，Python，Java，Lua，Matlab，Octave或Urbi編寫。</p>
 <p style="text-align: justify;">Coppelia Robotics 在 <a href="https://www.coppeliarobotics.com/helpFiles/en/versionInfo.htm">CoppeliaSim version history</a> 中提到將不再更新 V-rep <span lang="zh-TW">,並將精力集中在CoppeliaSim上。CoppeliaSim與V-REP 100％兼容。<span style="background-color: #ffff99;">它運行速度比V-REP快，並且具有更多功能</span>。</span></p>
@@ -45,8 +44,7 @@
 <p style="text-align: justify;">2.力學分析</p>
 <p style="text-align: justify;">3.代碼編寫</p>
 <p style="text-align: justify;">4.模擬</p>
-<p style="text-align: justify;"></p>
-<h3>場景&amp;模型&amp;環境</h3>
+<p style="text-align: justify;"></p><h3>場景&amp;模型&amp;環境</h3>
 <p><span style="background-color: #ffff00;"><big><big>Scenes</big></big></span></p>
 <p style="text-align: justify;">場景和模型是CoppeliaSim的主要模擬元素。模型是場景的子元素。一個場景可以包含任何數量的模型</p>
 <p><span style="background-color: #ffff00;"><big><big>Models</big></big></span></p>
@@ -127,7 +125,7 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><a href="https://www.coppeliarobotics.com/helpFiles/en/tutorials.htm">Tutorials</a></p>
 <p><img alt="" height="57" src="/images/chrome_2020-03-24_01-07-28.png" width="249"/></p>
 <h2>Webots</h2>
-<h1>電子書翻譯</h1>
+<p><a href="https://cyberbotics.com/">https://cyberbotics.com/</a></p><h1>電子書翻譯</h1>
 <h2>Collaboration翻譯</h2>
 <p>DigitalProductCollaboration.txt翻譯</p>
 <p><span style="color: #ff0000;">Finding and Using the Right Design Collaboration Tools</span></p>
@@ -273,7 +271,7 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><img alt="" height="273" src="/images/coppeliaSim_2020-06-23_23-23-03.png" width="350"/></p>
 <p>加入:</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
-<p>car_model.py</p>
+<p>car_model.py(<a href="https://drive.google.com/file/d/1J1pQhL6sqpAUkscgDtepOexDB00LSeCn/view?usp=sharing">car_model.py無模型,ttt</a>)</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># -*- coding: utf-8 -*-
 """
 Created on Tue Jan 06 22:00:39 2015
@@ -396,8 +394,74 @@ for i in range(150):   #可用while True: 取代
     print('Frame took:', dt*1000.0, 'ms');
     cv2.imshow('image',img);
     cv2.waitKey(1); # in milliseconds</pre>
-<p></p><h2>問題</h2>
-<p>1.模型導入後無法正常模擬(程式寫入後,無法控程式寫入後,無法控制)</p><h1>每周進度</h1>
+<p></p>
+<h2>問題</h2>
+<p>1.模型導入後無法正常模擬(程式寫入後,無法控程式寫入後,無法控制)</p>
+<h1>VirtualBox</h1>
+<p><a href="https://www.virtualbox.org/">VirtualBox</a> (<a href="https://www.virtualbox.org/wiki/Downloads">Download link</a>)</p>
+<p>Ubuntu (@gm <span>account</span>)</p>
+<p><a href="https://drive.google.com/open?id=143jFMheM1xjLxhLkSAouThLzj3WUYX6_">Virtualbox appliance of Ubuntu 20.04</a></p>
+<p><a href="https://drive.google.com/file/d/13Gqwyj0CGR6wa9dZg_BmlCLv5cNYWQJ_/view">Virtualbox appliance of Ubuntu 20.04 W12 version</a></p>
+<h2>IPv4設定</h2>
+<p><big><big>VirtualBox網路設定</big></big></p>
+<p>新增網路設定</p>
+<p><img alt="" height="188" src="/images/VirtualBox_2020-06-03_01-44-50.png" width="278"/></p>
+<p><span>設定Port號(IPv4)</span></p>
+<p><span><img alt="" height="283" src="/images/VirtualBox_2020-06-03_02-14-34.png" width="422"/></span></p>
+<p><span></span></p>
+<p>IP 查詢使用:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">ifconfig</pre>
+<p><img alt="" height="299" src="/images/VirtualBoxVM_2020-06-24_01-44-25.png" width="496"/></p>
+<p>*若遇到Proxy問題</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/apt/apt.conf.d
+sudo vi proxy.conf
+
+#案I鍵進入編輯輸入以下內容:(編輯完成後按ESC&gt;&gt;:wq儲存編輯)
+Acquire::http::proxy "http://[2001:288:6004:17::port號]:3128";
+
+更新apt
+sudo apt update
+</pre><h2>IPv6設定</h2>
+<p>新增網路設定</p>
+<p><img alt="" height="188" src="/images/VirtualBox_2020-06-03_01-44-50.png" width="278"/></p>
+<p><span>設定Port號(IPv6)</span></p>
+<p><span><img alt="" height="282" src="/images/VirtualBox_2020-06-03_02-14-42.png" width="422"/></span></p>
+<p>*ipv6環境設定</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/netplan
+
+sudo vi 00-installer-config.yaml
+
+#按I健進入編輯,ESC退出,:wq儲存
+# This is the network config written by 'subiquity'
+network:
+    ethernets:
+        enpes3:
+            dhcp4: true
+            dhcp6: true
+            nameservers:
+                addresses:
+                    - 2001:b000:168::1
+    version: 2
+
+sudo netplan apply</pre>
+<hr class="style-two"/>
+<p>IPv6設置 (依學號)</p>
+<p>依照<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">老師說明</a>設定IPv6:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">2001:288:6004:17:2020:1::7148/64
+ 
+gateway: 2001:288:6006:17::254
+ 
+dns:
+2001:288:6004:1::2
+2001:288:6004:17::2
+2001:288:6004:17::3
+2001:b000:168::1
+ 
+"c:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands sethduuid Ubwcm_w13.vdi</pre>
+<div>
+<div class="syntaxhighlighter html" id="highlighter_123243"></div>
+</div>
+<p><img alt="" height="342" src="/images/xZhHl8lVn7.gif" width="608"/></p><h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
 <p>了解製作四輪機器人所需功能</p>
