@@ -246,6 +246,10 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span><img alt="" height="292" src="/images/coppeliaSim_2020-05-18_18-35-24.png" width="458"/></span></p>
 <p><span>7.調整後按下star simulation 進行模擬</span></p>
 <p><span><img alt="" height="64" src="/images/coppeliaSim_2020-05-18_18-46-26.png" width="64"/></span></p>
+<hr class="style-two"/>
+<p><span style="color: #ff0000;"><big><big><big>❈皮膚概念</big></big></big></span></p>
+<p><span style="color: #ff0000;"></span>對CoppeliaSim來說,外部導入的模型(STL檔),僅是皮膚,故無法對其動作做控制,需要先建立實體模型(在<span>CoppeliaSim建立基本形狀</span>),再把皮膚<span>(STL檔)</span>貼上</p>
+<hr class="style-two"/>
 <p><big><big><big>對模型加入腳本並編寫程式進行控制</big></big></big></p>
 <p>1.對車身零件點右鍵 點選Add &gt;&gt; Associated scrip &gt;&gt; Non threated</p>
 <p><img alt="" height="412" src="/images/coppeliaSim_2020-05-18_18-48-38.png" width="454"/></p>
@@ -255,7 +259,144 @@ Newton Dynamics是一個跨平台的逼真的物理模擬文庫。它實現了�
 <p><span><img alt="" height="385" src="/images/coppeliaSim_2020-05-18_18-55-27.png" width="460"/></span></p>
 <p><big><big><big>Remote API</big></big></big></p>
 <p>用Remote API取得遠端模擬影像</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rwATIlMwpFA" width="560"></iframe></p><h2>問題</h2>
+<p></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/rwATIlMwpFA" width="560"></iframe></p>
+<p>參考老師網頁進行設置:</p>
+<p><a href="http://mde.tw/cd2020pj1/content/RemoteAPI.html">http://mde.tw/cd2020pj1/content/RemoteAPI.html</a></p>
+<p><a href="http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html">http://mde.tw/cd2020pj1/content/Self-driving%20car%20ex.html</a></p>
+<p>於車子上建立sensor</p>
+<p><img alt="" height="46" src="/images/coppeliaSim_2020-06-23_22-46-01.png" width="211"/></p>
+<p>對其參數進行設定:</p>
+<p><img alt="" height="328" src="/images/coppeliaSim_2020-06-23_22-47-34.png" width="311"/></p>
+<p><img alt="" height="417" src="/images/coppeliaSim_2020-06-23_22-47-39.png" width="309"/></p>
+<p>在camera加入腳本</p>
+<p><img alt="" height="273" src="/images/coppeliaSim_2020-06-23_23-23-03.png" width="350"/></p>
+<p>加入:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">simRemoteApi.start(19999)</pre>
+<p>car_model.py(<a href="https://drive.google.com/file/d/1J1pQhL6sqpAUkscgDtepOexDB00LSeCn/view?usp=sharing">car_model.py無模型,ttt</a>)</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false"># -*- coding: utf-8 -*-
+"""
+Created on Tue Jan 06 22:00:39 2015
+ 
+@author: Karan Vivek Bhargava
+"""
+#Import Libraries:
+import vrep                  #V-rep library
+import sys
+import time                #used to keep track of time
+import numpy as np         #array library
+import cv2
+import imutils
+ 
+# Model for the car with two variables throttle and steering
+class CarControl():
+    def __init__(self, clientID, printFlag = False):
+        self.clientID = clientID;
+        # retrieve motor  handles
+        errorCode, self.steer_handle = vrep.simxGetObjectHandle(self.clientID, 'steer_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.motor_handle = vrep.simxGetObjectHandle(self.clientID, 'motor_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.fl_brake_handle = vrep.simxGetObjectHandle(self.clientID, 'fl_brake_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.fr_brake_handle = vrep.simxGetObjectHandle(self.clientID, 'fr_brake_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.bl_brake_handle = vrep.simxGetObjectHandle(self.clientID, 'bl_brake_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.br_brake_handle = vrep.simxGetObjectHandle(self.clientID, 'br_brake_joint', vrep.simx_opmode_oneshot_wait);
+        errorCode, self.camera_f_handle = vrep.simxGetObjectHandle(self.clientID, 'cam_f', vrep.simx_opmode_oneshot_wait);
+         
+        vrep.simxGetVisionSensorImage(self.clientID, self.camera_f_handle, 0, vrep.simx_opmode_streaming)
+        print('Received Handles...');
+ 
+        self.factor = 30/(2.68*3.6);
+        self.max_throttle = 19; # Kmph
+        self.max_reverse_throttle = -19; #Kmph
+        self.max_steer = 30; # Degrees
+ 
+        self.printFlag = printFlag;
+         
+        # Self test the camera
+        print('Setting up the camera system...');
+        self.lastFrame = None;
+        err = 0;
+        while(err != 1):
+            err, self.lastFrame = self.get_image();
+        print('Camera setup successful.')
+         
+ 
+    def set_throttle(self, target_speed):
+        if(target_speed &gt; self.max_throttle):
+            target_speed = self.max_throttle;
+        elif(target_speed &lt; self.max_reverse_throttle):
+            target_speed = self.max_reverse_throttle;
+        if(self.printFlag):
+            print('Setting throttle to', target_speed);
+        speed = target_speed * self.factor;
+        errorCode = vrep.simxSetJointTargetVelocity(self.clientID, self.motor_handle, speed, vrep.simx_opmode_streaming);
+ 
+    def set_steering(self, steer_pos):
+        if(abs(steer_pos) &gt; self.max_steer):
+            if(steer_pos &gt; 0):
+                steer_pos = self.max_steer;
+            else:
+                steer_pos = -self.max_steer;
+        if(self.printFlag):
+            print('Setting steering to', steer_pos);
+        # Convert to radians
+        steer_pos = np.deg2rad(steer_pos);        
+        errorCode = vrep.simxSetJointTargetPosition(self.clientID, self.steer_handle, steer_pos, vrep.simx_opmode_streaming);
+ 
+    def get_info(self):
+        # Check velocity
+        err, bl_wheel_vel = vrep.simxGetObjectFloatParameter(self.clientID, self.bl_brake_handle, vrep.sim_jointfloatparam_velocity, vrep.simx_opmode_streaming);
+        err, br_wheel_vel = vrep.simxGetObjectFloatParameter(self.clientID, self.br_brake_handle, vrep.sim_jointfloatparam_velocity, vrep.simx_opmode_streaming);
+        rear_wheel_velocity = ((bl_wheel_vel) + (br_wheel_vel))/2.0;
+        linear_velocity = rear_wheel_velocity * 0.09 * 3.6; # Kmph
+ 
+        throttle = linear_velocity;
+        steer_errorCode, steer_pos = vrep.simxGetJointPosition(self.clientID, self.steer_handle, vrep.simx_opmode_streaming);
+        if(self.printFlag):
+            print('Throttle:', throttle, 'Steering:', steer_pos);
+ 
+    def get_image(self):
+        err, resolution, image = vrep.simxGetVisionSensorImage(self.clientID, self.camera_f_handle, 0, vrep.simx_opmode_buffer);
+        if err == vrep.simx_return_ok:
+            img = np.array(image,dtype=np.uint8);
+            img.resize([resolution[1],resolution[0],3]);
+            self.lastFrame = imutils.rotate_bound(img, 90);
+            return 1, self.lastFrame;
+        elif err == vrep.simx_return_novalue_flag:
+            return 0, None;
+        else:
+            return err, None;
+ 
+vrep.simxFinish(-1) # just in case, close all opened connections
+clientID = vrep.simxStart('127.0.0.1',19999,True,True,5000,5) # Get the client ID
+res=vrep.simxLoadScene(clientID,"Y:\CoppeliaSim_4_Self_Driving_Car_Simulation\sdc.ttt",0,vrep.simx_opmode_blocking)
+x =vrep.simxStartSimulation(clientID,vrep.simx_opmode_oneshot_wait) 
+ 
+if clientID!=-1:  #check if client connection successful
+    print('Connected to remote API server')
+     
+else:
+    print('Connection not successful')
+    sys.exit('Could not connect')
+ 
+# Initialize car control object
+car = CarControl(clientID, printFlag = False);
+car.set_steering(20); # Degrees
+car.set_throttle(1);  # Kmph
+ 
+for i in range(150):   #可用while True: 取代
+    # Start time for image process
+    start = time.time();
+ 
+    err, img = car.get_image();
+ 
+    # End time for image process
+    end = time.time();
+ 
+    dt = end - start;
+    print('Frame took:', dt*1000.0, 'ms');
+    cv2.imshow('image',img);
+    cv2.waitKey(1); # in milliseconds</pre>
+<p></p><h2>問題</h2>
 <p>1.模型導入後無法正常模擬(程式寫入後,無法控程式寫入後,無法控制)</p><h1>每周進度</h1>
 <p>W2</p>
 <p><a href="https://www.coppeliarobotics.com/helpFiles/index.html">CoppeliaSim User Manual</a> 內容分析</p>
@@ -341,4 +482,4 @@ dns:
 2001:b000:168::1
 
 "c:\Program Files\Oracle\VirtualBox\VBoxManage.exe" internalcommands sethduuid Ubwcm_w13.vdi</pre>
-<p>W15</p>
+<p><img alt="" height="342" src="/images/xZhHl8lVn7.gif" width="608"/></p>
