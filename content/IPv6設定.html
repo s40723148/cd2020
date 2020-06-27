@@ -143,7 +143,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='About.html'>About</a><li class='has-children'><a href='CoppeliaSim.html'>CoppeliaSim</a><ul class='dropdown'><li class='has-children'><a href='CoppeliaSim資料分析.html'>CoppeliaSim資料分析</a><ul class='dropdown'><li><a href='場景&模型&環境.html'>場景&模型&環境</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='編寫代碼.html'>編寫代碼</a><li><a href='模擬.html'>模擬</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Webots.html'>Webots</a></li></ul><li class='has-children'><a href='電子書翻譯.html'>電子書翻譯</a><ul class='dropdown'><li><a href='Collaboration翻譯.html'>Collaboration翻譯</a></li></ul><li class='has-children'><a href='四輪機器人模擬.html'>四輪機器人模擬</a><ul class='dropdown'><li><a href='問題.html'>問題</a></li></ul><li class='has-children'><a href='VirtualBox.html'>VirtualBox</a><ul class='dropdown'><li><a href='IPv4設定.html'>IPv4設定</a><li><a href='IPv6設定.html'>IPv6設定</a></li></ul><li><a href='每周進度.html'>每周進度</a></li>
+                     <li><a href='About.html'>About</a><li class='has-children'><a href='Assignment.html'>Assignment</a><ul class='dropdown'><li class='has-children'><a href='CoppeliaSim資料分析.html'>CoppeliaSim資料分析</a><ul class='dropdown'><li><a href='場景&模型&環境.html'>場景&模型&環境</a><li><a href='Calculation modules.html'>Calculation modules</a><li><a href='編寫代碼.html'>編寫代碼</a><li><a href='模擬.html'>模擬</a><li><a href='Tutorials.html'>Tutorials</a></li></ul><li><a href='Webots.html'>Webots</a><li><a href='Collaboration翻譯.html'>Collaboration翻譯</a></li></ul><li class='has-children'><a href='四輪機器人模擬.html'>四輪機器人模擬</a><ul class='dropdown'><li><a href='問題.html'>問題</a></li></ul><li class='has-children'><a href='VirtualBox.html'>VirtualBox</a><ul class='dropdown'><li><a href='IPv4設定.html'>IPv4設定</a><li><a href='IPv6設定.html'>IPv6設定</a></li></ul><li><a href='每周進度.html'>每周進度</a><li><a href='期末報告.html'>期末報告</a></li>
                       </ul>
                 </nav>
               </div>
@@ -183,6 +183,16 @@ network:
     version: 2
 
 sudo netplan apply</pre>
+<p><span>*若遇到Proxy問題</span></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">cd /etc/apt/apt.conf.d
+sudo vi proxy.conf
+ 
+#按I鍵進入編輯輸入以下內容:(編輯完成後按ESC後輸入:wq儲存編輯)
+Acquire::http::proxy "http://[2001:288:6004:17::port號]:3128";
+ 
+更新apt
+sudo apt update
+</pre>
 <hr class="style-two"/>
 <p>IPv6設置 (依學號)</p>
 <p>依照<a href="https://github.com/mdecourse/cd2020/blob/master/downloads/w13_ipv6_assignment.txt">老師說明</a>設定IPv6:</p>
@@ -200,7 +210,8 @@ dns:
 <div>
 <div class="syntaxhighlighter html" id="highlighter_123243"></div>
 </div>
-<p><img alt="" height="342" src="./../images/xZhHl8lVn7.gif" width="608"/></p><br />IPv4設定 << <a href='IPv4設定.html'>Previous</a> <a href='每周進度.html'>Next</a> >> 每周進度</div>
+<p><img alt="" height="342" src="./../images/xZhHl8lVn7.gif" width="608"/></p>
+<br />IPv4設定 << <a href='IPv4設定.html'>Previous</a> <a href='每周進度.html'>Next</a> >> 每周進度</div>
         
     <!-- footer -->
       <div class="container">
