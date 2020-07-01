@@ -181,7 +181,7 @@
 <t tx="407.20200624031640.2">## 每周進度
 * [詳細內容](https://s40723148.github.io/cd2020/content/%E6%AF%8F%E5%91%A8%E9%80%B2%E5%BA%A6.html)</t>
 <t tx="leo.20180902120523.1"></t>
-<t tx="leo.20180902120523.10">## CMSimfly 網際內容管理
+<t tx="leo.20180902120523.10">## 協同產品設計實習
 
 ### 40723148
 
@@ -263,7 +263,7 @@ Created by [40723148](https://s40723148.github.io/cd2020/content/)
 <t tx="leo.20180902120523.5">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;
-CMSimfly 網際內容管理
+協同產品設計實習
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;
